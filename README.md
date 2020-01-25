@@ -11,7 +11,7 @@ npm i menu-hamburguer
 ```
 # Usage
 
-## HTML
+### HTML
 ```
 <!DOCTYPE html>
 <html>
@@ -23,7 +23,7 @@ npm i menu-hamburguer
 </body>
 </html>
 ```
-## JavaScript
+### JavaScript
 ```
 
 ```
