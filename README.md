@@ -16,10 +16,10 @@ npm i menu-hamburguer
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+  <title></title>
 </head>
 <body>
-	<div id="menu-wrapper"></div>
+  <div id="menu-wrapper"></div>
 </body>
 </html>
 ```
