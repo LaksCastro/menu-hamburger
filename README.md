@@ -2,12 +2,17 @@
 A clean, simple and easy to use library
 
 # Installation
+#### Via packages
 ```
 yarn add menu-hamburger 
 ```
 or
 ```
 npm i menu-hamburguer
+```
+#### Via CDN
+```
+<script type="text/javascript" src="https://unpkg.com/menu-hamburger@2.0.0/lib/menu-hamburger.min.js" />
 ```
 # Usage
 
