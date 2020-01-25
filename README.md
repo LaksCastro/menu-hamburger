@@ -21,7 +21,7 @@ npm i menu-hamburguer
 <!DOCTYPE html>
 <html>
 <head>
-  <title>A Simple Menu Hamburger</title>>
+  <title>A Simple Menu Hamburger</title>
   <script src="https://unpkg.com/menu-hamburger@2.0.0/lib/menu-hamburger.min.js"></script>
 </head>
 <body>
@@ -41,3 +41,18 @@ const menu = MenuHamburger.initialize({
   backgroundColor: "#f2f2f2",
 });
 ```
+# Config
+```
+const menu = MenuHamburger.initialize({
+  rootElement: null,
+  size: 30,
+  lineWidth: 3,
+  menuClassName: null,
+  menuIconClassName: null,
+  transition: 'all .2s ease-in-out',
+  backgroundColor: 'white',
+  borderRadius: '8px',
+  iconColor: '#444',
+});
+```
+
