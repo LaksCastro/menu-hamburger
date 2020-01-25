@@ -34,9 +34,10 @@ npm i menu-hamburguer
 ``` 
 ### JavaScript
 ``` javascript
+const rootElement = document.getElementById("menu-wrapper");
 const menu = MenuHamburger.initialize({
-  rootElement: document.getElementById("menu-wrapper"),
+  rootElement,
   size: 50,
   backgroundColor: "#f2f2f2",
-})
+});
 ```
