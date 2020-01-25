@@ -97,7 +97,7 @@ Default value: `3`
 required: `false`  
 type: `string`  
 Allowed values: `any valid HTML class string`  
-Default value: null
+Default value: `null`
 
 ### `menuIconClassName`
 > Receives the class to apply on the Menu Node Icon
@@ -105,7 +105,7 @@ Default value: null
 required: `false`  
 type: `string`  
 Allowed values: `any valid HTML class string`  
-Default value: null
+Default value: `null`
 
 ### `transition`
 > Receives the custom Css transition
@@ -121,7 +121,7 @@ Default value: "all .2s ease-in-out"
 required: `false`  
 type: `string`  
 Allowed values: `any Css color`  
-Default value: "white"
+Default value: `white`
 
 ### `borderRadius`
 > Receive the Menu border radius
@@ -129,7 +129,7 @@ Default value: "white"
 required: `false`  
 type: `string`  
 Allowed values: `any Css size`  
-Default value: "8px"
+Default value: `8px`
 
 ### `iconColor`
 > Receive the Menu Icon color
@@ -137,7 +137,7 @@ Default value: "8px"
 required: `false`  
 type: `string`  
 Allowed values: `any Css color`  
-Default value: "#444"
+Default value: `#444`
 
 # API
 Menu exposes API methods that can be used to control the Menu externally. Example usage:
