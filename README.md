@@ -31,9 +31,9 @@ npm i menu-hamburguer
   </script>
 </body>
 </html>
-``` javascript
+``` 
 ### JavaScript
-```
+``` javascript
 const menu = MenuHamburger.initialize({
   rootElement: document.getElementById("menu-wrapper"),
   size: 50,
