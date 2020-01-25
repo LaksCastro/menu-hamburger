@@ -5,17 +5,23 @@ const commonStyles = config => ({
   transition: config.transition,
   transform: 'translate(-50%, -50%)',
   initOpened: false,
+  backgroundColor: config.iconColor,
+})
+const commonContainerStyles = config => ({
+  width: `${config.size}px`,
+  height: `${config.size}px`,
+  position: 'relative',
+  transition: config.transition,
+  cursor: 'pointer',
+  backgroundColor: config.backgroundColor,
+  borderRadius: config.borderRadius,
 })
 export default {
   close: {
     key: 'close',
     styles: {
       getContainerStyles: config => ({
-        width: `${config.size}px`,
-        height: `${config.size}px`,
-        position: 'relative',
-        transition: config.transition,
-        cursor: 'pointer',
+        ...commonContainerStyles(config),
       }),
       getAfterStyles: config => ({
         ...commonStyles(config),
@@ -40,11 +46,7 @@ export default {
     key: 'open',
     styles: {
       getContainerStyles: config => ({
-        width: `${config.size}px`,
-        height: `${config.size}px`,
-        position: 'relative',
-        transition: config.transition,
-        cursor: 'pointer',
+        ...commonContainerStyles(config),
       }),
       getAfterStyles: config => ({
         ...commonStyles(config),

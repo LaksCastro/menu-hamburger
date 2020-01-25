@@ -5,4 +5,7 @@ export default {
   menuClassName: null,
   menuIconClassName: null,
   transition: 'all .2s ease-in-out',
+  backgroundColor: 'white',
+  borderRadius: '8px',
+  iconColor: '#444',
 }
