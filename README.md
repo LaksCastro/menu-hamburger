@@ -113,7 +113,7 @@ Default value: `null`
 required: `false`  
 type: `string`  
 Allowed values: `any valid value to Css property transition`  
-Default value: "all .2s ease-in-out"
+Default value: `all .2s ease-in-out`
 
 ### `backgroundColor`
 > Receive the Background Color of Menu
