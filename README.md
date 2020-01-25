@@ -138,3 +138,44 @@ required: `false`
 type: `string`  
 Allowed values: `any Css color`  
 Default value: "#444"
+
+# API
+Menu exposes API methods that can be used to control the Menu externally. Example usage:
+``` javascript
+const menu = MenuHamburger.initialize({ ...yourConfigHere });
+
+menu.toggle();
+menu.open();
+menu.close();
+```
+
+#### `toggle`
+> Opens the Menu if it is closed or closes if it is open
+
+#### `open`
+> Open Menu
+
+#### `close`
+> Close Menu
+
+# Add Event Listeners
+Menu exposes custom events that can be hooked on to. Example usage:
+``` javascript
+const menu = MenuHamburger.initialize({ ...yourConfigHere });
+
+menu.on("toggle", () => {
+  console.log("Your imagination is the limit")
+});
+```
+
+#### `init`
+> This function is called when the Menu is initialized
+
+#### `toggle`
+> This function is called when the Menu is closed or opened
+
+#### `open`
+> This function is called when the Menu is opened
+
+#### `close`
+> This function is called when the Menu is closed
