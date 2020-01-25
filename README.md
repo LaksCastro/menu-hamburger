@@ -71,6 +71,7 @@ const menu = MenuHamburger.initialize({
   backgroundColor: 'white',
   borderRadius: '8px',
   iconColor: '#444',
+  initOpened: false
 });
 ```
 ### `rootElement`
@@ -144,6 +145,14 @@ required: `false`
 type: `string`  
 Allowed values: `any Css color`  
 Default value: `#444`
+
+### `initOpened`
+> Defines whether the menu should start open or closed, where true means start open and false means start closed
+
+required: `false`  
+type: `boolean`  
+Allowed values: `true` `false`  
+Default value: `false`
 
 # API
 Menu exposes API methods that can be used to control the Menu externally. Example usage:
