@@ -17,7 +17,7 @@ npm i menu-hamburguer
 # Usage
 
 ### HTML
-```
+``` html 
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,7 +31,7 @@ npm i menu-hamburguer
   </script>
 </body>
 </html>
-```
+``` javascript
 ### JavaScript
 ```
 const menu = MenuHamburger.initialize({
