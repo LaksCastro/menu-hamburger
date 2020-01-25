@@ -8,4 +8,5 @@ export default {
   backgroundColor: 'white',
   borderRadius: '8px',
   iconColor: '#444',
+  initOpened: false,
 }

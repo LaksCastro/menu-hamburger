@@ -15,6 +15,7 @@ var apiListeners = {
   onToggle: () => {},
   onOpen: () => {},
   onClose: () => {},
+  onDestroy: () => {},
 }
 
 const init = () => {
@@ -49,25 +50,33 @@ const init = () => {
 }
 const toggle = () => {
   isOpened ? close() : open()
-  isOpened = !isOpened
 }
 
 const open = () => {
+  if (isOpened) return
+
   setStyles(container, stateStyles.open.styles.getContainerStyles(config))
   setStyles(after, stateStyles.open.styles.getAfterStyles(config))
   setStyles(before, stateStyles.open.styles.getBeforeStyles(config))
   setStyles(line, stateStyles.open.styles.getLineStyles(config))
+
   apiListeners.onOpen()
   apiListeners.onToggle()
+
+  isOpened = true
 }
 const close = () => {
+  if (!isOpened) return
+
   setStyles(container, stateStyles.close.styles.getContainerStyles(config))
   setStyles(after, stateStyles.close.styles.getAfterStyles(config))
-
   setStyles(before, stateStyles.close.styles.getBeforeStyles(config))
   setStyles(line, stateStyles.close.styles.getLineStyles(config))
+
   apiListeners.onClose()
   apiListeners.onToggle()
+
+  isOpened = false
 }
 
 const addEventListener = () => {
@@ -87,6 +96,11 @@ const on = (action, callback) => {
     case API.ON_CLOSE:
       apiListeners.onClose = callback
       break
+    case API.ON_DESTROY:
+      apiListeners.onDestroy = callback
+      break
+    default:
+      throw new Error('Invalid event listener :(')
   }
   apiListeners.onInit()
   apiListeners.onInit = () => {}
@@ -105,11 +119,14 @@ const off = (action, callback = () => {}) => {
     case API.ON_CLOSE:
       apiListeners.onClose = () => {}
       break
+    case API.ON_DESTROY:
+      apiListeners.onDestroy = () => {}
+      break
   }
   callback()
 }
 const destroy = () => {
-  container.removeEventListener('click')
+  container.removeEventListener('click', config.initOpened ? open : close)
   setStyles(container, {
     display: 'none',
   })
@@ -118,6 +135,8 @@ const destroy = () => {
   apiListeners.onToggle = () => {}
   apiListeners.onOpen = () => {}
   apiListeners.onClose = () => {}
+  apiListeners.onDestroy()
+  apiListeners.onDestroy = () => {}
 }
 
 const MenuHamburger = Object.freeze({
