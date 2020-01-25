@@ -67,7 +67,7 @@ const menu = MenuHamburger.initialize({
   iconColor: '#444',
 });
 ```
-1. #### `rootElement`
+### `rootElement`
 > Receives the HTML container element from the menu
 
 required: `true`  
@@ -75,7 +75,7 @@ type: `HTMLNode`
 Allowed values: `any HTML Node`  
 Default value: `null`
 
-2. #### `size`
+### `size`
 > Receives the Menu Hamburger width and height
 
 required: `false`  
@@ -83,7 +83,7 @@ type: `number`
 Allowed values: `any number`  
 Default value: `30`
 
-3. #### `lineWidth`
+### `lineWidth`
 > Receives the Menu line width
 
 required: `false`  
@@ -91,7 +91,7 @@ type: `number`
 Allowed values: `any number`  
 Default value: `3`
 
-4. #### `menuClassName`
+### `menuClassName`
 > Receives the class to apply on the Menu Node
 
 required: `false`  
@@ -99,7 +99,7 @@ type: `string`
 Allowed values: `any valid HTML class string`  
 Default value: null
 
-5. #### `menuIconClassName`
+### `menuIconClassName`
 > Receives the class to apply on the Menu Node Icon
 
 required: `false`  
@@ -107,7 +107,7 @@ type: `string`
 Allowed values: `any valid HTML class string`  
 Default value: null
 
-6. #### `transition`
+### `transition`
 > Receives the custom Css transition
 
 required: `false`  
@@ -115,7 +115,7 @@ type: `string`
 Allowed values: `any valid value to Css property transition`  
 Default value: "all .2s ease-in-out"
 
-7. #### `backgroundColor`
+### `backgroundColor`
 > Receive the Background Color of Menu
 
 required: `false`  
@@ -123,7 +123,7 @@ type: `string`
 Allowed values: `any Css color`  
 Default value: "white"
 
-8. #### `borderRadius`
+### `borderRadius`
 > Receive the Menu border radius
 
 required: `false`  
@@ -131,7 +131,7 @@ type: `string`
 Allowed values: `any Css size`  
 Default value: "8px"
 
-9. #### `iconColor`
+### `iconColor`
 > Receive the Menu Icon color
 
 required: `false`  
@@ -149,13 +149,13 @@ menu.open();
 menu.close();
 ```
 
-1. #### `toggle`
+### `toggle`
 > Opens the Menu if it is closed or closes if it is open
 
-2. #### `open`
+### `open`
 > Open Menu
 
-3. #### `close`
+### `close`
 > Close Menu
 
 # Add Event Listeners
@@ -168,14 +168,40 @@ menu.on("toggle", () => {
 });
 ```
 
-1. #### `init`
+### `init`
 > This function is called when the Menu is initialized
 
-2. #### `toggle`
+### `toggle`
 > This function is called when the Menu is closed or opened
 
-3. #### `open`
+### `open`
 > This function is called when the Menu is opened
 
-4. #### `close`
+### `close`
 > This function is called when the Menu is closed
+
+# Remove Event Listeners
+The menu exposes custom events that can be used to remove an event listener. Example of use:
+``` javascript
+const menu = MenuHamburger.initialize({ ...yourConfigHere });
+
+menu.on("toggle", () => {
+  console.log("I'm adding a listener to the toggle event")
+});
+menu.off("toggle", () => {
+  console.log("And right down here I already removed this event, so nothing will happen")
+});
+
+```
+
+### `init`
+> Remove the init event
+
+### `toggle`
+> Remove the toggle event
+
+### `open`
+> Remove the open event
+
+### `close`
+> Remove the close event
