@@ -49,6 +49,7 @@ const init = () => {
 
   rootElement.appendChild(container)
 }
+
 const toggle = () => {
   isOpened ? close() : open()
 }
@@ -66,6 +67,7 @@ const open = () => {
 
   isOpened = true
 }
+
 const close = () => {
   if (isOpened === false) return
 
@@ -83,6 +85,7 @@ const close = () => {
 const addEventListener = () => {
   container.addEventListener('click', toggle)
 }
+
 const on = (action, callback) => {
   switch (action) {
     case API.ON_INIT:
@@ -106,6 +109,7 @@ const on = (action, callback) => {
   apiListeners.onInit()
   apiListeners.onInit = () => {}
 }
+
 const off = (action, callback = () => {}) => {
   switch (action) {
     case API.ON_INIT:
