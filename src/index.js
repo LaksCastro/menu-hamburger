@@ -45,7 +45,8 @@ const init = () => {
     })
   }
 
-  isOpened ? open() : close()
+  config.initOpened ? open() : close()
+
   rootElement.appendChild(container)
 }
 const toggle = () => {
@@ -53,7 +54,7 @@ const toggle = () => {
 }
 
 const open = () => {
-  if (isOpened) return
+  if (isOpened === true) return
 
   setStyles(container, stateStyles.open.styles.getContainerStyles(config))
   setStyles(after, stateStyles.open.styles.getAfterStyles(config))
@@ -66,7 +67,7 @@ const open = () => {
   isOpened = true
 }
 const close = () => {
-  if (!isOpened) return
+  if (isOpened === false) return
 
   setStyles(container, stateStyles.close.styles.getContainerStyles(config))
   setStyles(after, stateStyles.close.styles.getAfterStyles(config))
@@ -148,8 +149,6 @@ const MenuHamburger = Object.freeze({
     if (!config.rootElement) throw new Error('Root element no provided :(')
 
     rootElement = config.rootElement
-
-    isOpened = config.initOpened
 
     init()
     addEventListener()
