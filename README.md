@@ -16,7 +16,7 @@ npm i menu-hamburguer
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>A Simple Menu Hamburger</title>
 </head>
 <body>
   <div id="menu-wrapper"></div>
