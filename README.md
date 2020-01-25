@@ -164,6 +164,9 @@ menu.close();
 ### `close`
 > Close Menu
 
+### `destroy`
+> Destroys the current instance of the Menu
+
 # Add Event Listeners
 Menu exposes custom events that can be hooked on to. Example usage:
 ``` javascript
