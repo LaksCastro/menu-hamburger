@@ -189,6 +189,9 @@ menu.on("toggle", () => {
 ### `close`
 > This function is called when the Menu is closed
 
+### `destroy`
+> This function is called when the Menu is destroyed
+
 # Remove Event Listeners
 The menu exposes custom events that can be used to remove an event listener. Example of use:
 ``` javascript
@@ -204,13 +207,16 @@ menu.off("toggle", () => {
 ```
 
 ### `init`
-> Remove the init event
+> Remove the init event listener
 
 ### `toggle`
-> Remove the toggle event
+> Remove the toggle event listener
 
 ### `open`
-> Remove the open event
+> Remove the open event listener
 
 ### `close`
-> Remove the close event
+> Remove the close event listener
+
+### `destroy`
+> Remove the destroy event listener
