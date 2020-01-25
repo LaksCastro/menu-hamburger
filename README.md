@@ -21,14 +21,22 @@ npm i menu-hamburguer
 <!DOCTYPE html>
 <html>
 <head>
-  <title>A Simple Menu Hamburger</title>
+  <title>A Simple Menu Hamburger</title>>
+  <script src="https://unpkg.com/menu-hamburger@2.0.0/lib/menu-hamburger.min.js"></script>
 </head>
 <body>
   <div id="menu-wrapper"></div>
+  <script type="text/javascript">
+  	//Js code here
+  </script>
 </body>
 </html>
 ```
 ### JavaScript
 ```
-
+const menu = MenuHamburger.initialize({
+  rootElement: document.getElementById("menu-wrapper"),
+  size: 50,
+  backgroundColor: "#f2f2f2",
+})
 ```
