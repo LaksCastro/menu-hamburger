@@ -1,6 +1,12 @@
 # Menu Hamburger
 A clean, simple and easy to use library
 
+# PrintScreen
+![Opened](https://i.imgur.com/x0IquWe.png)
+![Animating](https://i.imgur.com/frVRogM.png)
+![Animating](https://i.imgur.com/85xSR2q.png)
+![Closed](https://i.imgur.com/J1iVw8F.png)
+
 # Installation
 #### Via packages
 ```
