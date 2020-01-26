@@ -17,7 +17,7 @@ or
 npm i menu-hamburguer
 ```
 #### Via CDN
-```
+``` html
 <script type="text/javascript" src="https://unpkg.com/menu-hamburger@2.0.0/lib/menu-hamburger.min.js"></script>
 ```
 # Usage
