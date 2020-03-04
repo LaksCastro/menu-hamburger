@@ -7,7 +7,7 @@
   "author": "LaksCastro",
   "publishConfig": { 
     "registry": "https://npm.pkg.github.com/" 
-  }
+  },
   "license": "MIT",
   "private": false,
   "scripts": {
