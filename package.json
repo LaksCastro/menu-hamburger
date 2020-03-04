@@ -1,6 +1,6 @@
 {
   "name": "menu-hamburger",
-  "version": "2.1.0",
+  "version": "2.0.9",
   "description": "lib to provide a simple menu hamburger with animation, state and api",
   "main": "index.js",
   "repository": "https://github.com/LaksCastro/menu-hamburguer",
