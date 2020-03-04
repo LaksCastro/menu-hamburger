@@ -59,16 +59,6 @@
 		  	font-size: 0.9em;
 		  	font-weight: 200;
 		}
-		.main-header-closed{
-			-webkit-transform: translateX(0);
-			    -ms-transform: translateX(0);
-			        transform: translateX(0);
-		}
-		.main-header-opened{
-			-webkit-transform: translateX(350px);
-			    -ms-transform: translateX(350px);
-			        transform: translateX(350px);
-		}
 		.sidebar{
 			-webkit-transition: all .3s ease-in-out;
 			-o-transition: all .3s ease-in-out;
@@ -166,11 +156,11 @@
 </head>
 <body>
 	<header class="main-header">
-		<div id="menu-wrapper"></div>
-		<h1>Your Awesome Logo</h1>
 		<a href="https://github.com/LaksCastro/menu-hamburger" target="_blank" rel="noopener noreferrer external">
 			<img src="./github.svg" alt="Github Repo" width="30" />
 		</a>
+		<h1>Your Awesome Logo</h1>
+		<div id="menu-wrapper"></div>
 	</header>
 	<aside class="sidebar sidebar-closed">
 		<h1>Put interesting content here :)</h1>
@@ -205,8 +195,6 @@
 		menu.on("open", function () {
 		  sidebar.classList.remove("sidebar-closed");
 		  sidebar.classList.add("sidebar-opened");
-		  header.classList.remove("main-header-closed");
-		  header.classList.add("main-header-opened");
 		  generateLog("Menu Opened", "green");
 		});
 		menu.on("close", function () {
