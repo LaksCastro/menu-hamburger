@@ -5,8 +5,8 @@
   "main": "index.js",
   "repository": "https://github.com/LaksCastro/menu-hamburguer",
   "author": "LaksCastro",
-  "publishConfig": { 
-    "registry": "https://npm.pkg.github.com/" 
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "license": "MIT",
   "private": false,
@@ -38,5 +38,8 @@
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.2.1"
+  },
+  "dependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
