@@ -2,7 +2,7 @@
 A clean, simple and easy to use library
 
 # Demo
-Check a demo [working here](https://menu-hamburger.netlify.com/)
+Check a demo [working here](https://lakscastro.github.io/menu-hamburger.js/)
 
 # PrintScreen
 ![Opened](https://i.imgur.com/x0IquWe.png)
