@@ -1,7 +1,7 @@
-let gh = require("gh-pages");
+let gh = require('gh-pages')
 
-gh.publish("dist", err => {
-  if(err) throw err;
-  
-  console.log("Success Publish to Github Pages");
-});
+gh.publish('lib', err => {
+  if (err) throw err
+
+  console.log('Success Publish to Github Pages')
+})
